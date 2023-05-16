@@ -2,3 +2,6 @@ asgiref
 Django
 sqlparse
 tzdata
+pillow
+django-extensions
+psycopg2

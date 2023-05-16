@@ -1,0 +1,106 @@
+[
+  {
+    "model": "catalog.Product",
+    "pk": 1,
+    "fields": {
+      "title": "Планшет Teclast P40HD",
+      "price": 10548
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 2,
+    "fields": {
+      "title": "Игра Call of Duty: Black Ops Cold War",
+      "price": 3328
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 3,
+    "fields": {
+      "title": "Мини-принтер струйный Bentsai bentsai b10",
+      "price": 21349
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 4,
+    "fields": {
+      "title": "Книги Гарри Поттер РОСМЭН, комплект из 7 книг",
+      "price": 5519
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 5,
+    "fields": {
+      "title": "Хидео Кодзима. Гены гения",
+      "price": 778
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 6,
+    "fields": {
+      "title": "Начинаем программировать на Python. 5-е изд.",
+      "price": 1680
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 7,
+    "fields": {
+      "title": "Саморез КемКреп 4.2 x 76 мм 235 шт. 1 кг.",
+      "price": 269
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 8,
+    "fields": {
+      "title": "Сварочный аппарат MIG-250Mini (ANDELI)",
+      "price": 12078
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 9,
+    "fields": {
+      "title": "Декоративная штукатурка Neva Decor Камосио",
+      "price": 2017
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 10,
+    "fields": {
+      "title": "Декоративный камень Лондон Брик",
+      "price": 844
+    }
+  },
+  {
+    "model": "catalog.Category",
+    "pk": 1,
+    "fields": {
+      "title": "Строительство и ремонт",
+      "description": "Художественная литература, букинистика, учебные"
+    }
+  },
+  {
+    "model": "catalog.Category",
+    "pk": 2,
+    "fields": {
+      "title": "Книги",
+      "description": "Инструменты, строительные материалы, крепеж"
+    }
+  },
+  {
+    "model": "catalog.Category",
+    "pk": 3,
+    "fields": {
+      "title": "Электроника",
+      "description": "Планшеты, телевизоры, ноутбуки"
+    }
+  }
+]
