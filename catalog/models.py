@@ -1,16 +1,19 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
+
 NULLABLE = {'blank': True, 'null': True}
+_MAX_SIZE = 300 # максимальный размер изображения
 
 
 # Create your models here.
 class Product(models.Model):
     title = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.TextField(verbose_name="Описание", **NULLABLE)
-    preview_image = models.ImageField(upload_to='catalog/', verbose_name='Превью-изображение', **NULLABLE)
-    product_category = models.CharField(max_length=20, verbose_name = "Категория", **NULLABLE)
+    preview_image = models.ImageField(upload_to='media/', verbose_name='Превью-изображение', **NULLABLE)
+    product_category = models.ForeignKey('Category', on_delete=models.CASCADE, max_length=20, verbose_name = "Категория", **NULLABLE)
     price = models.FloatField(verbose_name = "Стоимость", **NULLABLE)
-    creation_date = models.DateTimeField(verbose_name = 'Дата создания', **NULLABLE)
-    change_date = models.DateTimeField(verbose_name = 'Дата изменения', **NULLABLE)
+    creation_date = models.DateTimeField(auto_now_add=True, verbose_name = 'Дата создания', **NULLABLE)
+    change_date = models.DateTimeField(auto_now=True, verbose_name = 'Дата изменения', **NULLABLE)
 
     def __str__(self):
         return f"Продукт {self.title} из категории {self.product_category} по цене {self.price}"
@@ -25,7 +28,7 @@ class Category(models.Model):
     description = models.TextField(**NULLABLE)
 
     def __str__(self):
-        return f"Категория {self.title}"
+        return f"{self.title}"
 
     class Meta:
         verbose_name = 'категория'

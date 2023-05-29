@@ -1,0 +1,14 @@
+{% load catalog_tags %}
+<div class="card mb-4 box-shadow">
+    <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{item.title}}</h4>
+        <h5 class="my-0 font-weight-normal">{{item.product_category}}</h5>
+    </div>
+    <div class="card-body">
+        <h1 class="card-title pricing-card-title">RUB {{item.price}}</h1>
+        <img src="{% mymedia item.preview_image %}" alt="{{item.title}}" height="200px"/>
+        <p>{{item.description}}</p>
+        <a href="{% url 'catalog:card' item.pk %}" type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</a>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+    </div>
+</div>
